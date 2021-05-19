@@ -1,0 +1,9 @@
+---
+- name: Configure the host based firewall
+  systemd:
+    name: firewalld
+    enabled: false
+    state: stopped
+  when:
+    - ansible_facts.services['firewalld.service'].status == "enabled"
+    - ansible_facts.services['firewalld.service'].state == "running"
