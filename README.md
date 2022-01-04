@@ -1,4 +1,4 @@
-# baseline
+# Baseline
 
 Configure:
 
