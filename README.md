@@ -2,6 +2,6 @@
 
 Configure:
 
-firewall
+firewalld
 
 selinx
