@@ -1,4 +1,10 @@
 ---
+- name: Install required packages for selinux
+  package:
+    name: libselinux-python
+    state: present
+  when: "'libselinux-pyhton' not in ansible_facts.packages"
+  
 - name: Configure Security Enhanced Linux
   selinux:
     policy: targeted
