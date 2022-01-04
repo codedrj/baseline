@@ -1,4 +1,4 @@
-# baseline-rhel
+# baseline
 
 Configure:
 
