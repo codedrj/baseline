@@ -1,2 +1,7 @@
 ---
-- name: Disable SELinux
+- name: Configure Security Enhanced Linux
+  selinux:
+    policy: targeted
+    state: permissive
+  when:
+    - ansible_facts.services['selinux.service'].status == "enabled"
