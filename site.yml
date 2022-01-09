@@ -1,0 +1,17 @@
+---
+- name: Baseline the system
+  hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+  - name: Populate service facts
+    service_facts:
+    no_log: true
+
+  - name: Populate package facts
+    package_facts:
+      manager: auto
+    no_log: true
+  
+  - include: selinux.yml
+  - include: firewalld.yml
