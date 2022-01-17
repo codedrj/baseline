@@ -1,9 +1,4 @@
----
-#- name: Gather the rpm package facts
-#  package_facts:
-#    manager: auto
-#  no_log: true
-    
+---    
 - name: Install required packages for SElinux
   package:
     name: libselinux-python3

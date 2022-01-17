@@ -1,8 +1,4 @@
----
-#- name: Populate service facts
-#  service_facts:
-#  no_log: true
-    
+---  
 - name: Configure the Firewall Daemon
   systemd:
     name: firewalld
